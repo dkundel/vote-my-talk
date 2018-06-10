@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #13293d;
+  color: #f4f7f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 200;
+  color: #9ed356;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.4em;
+  margin: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  color: #f4f7f5;
+}
+
+ul {
+  margin-top: 10px;
+  text-align: left;
+  list-style-type: '⬥';
+}
+
+li {
+  color: #9ed356;
+  padding-left: 10px;
+}
+
+button {
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  background-color: #9ed356;
+  color: #13293d;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #7ab22e;
+}
