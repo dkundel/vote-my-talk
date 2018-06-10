@@ -7,10 +7,11 @@
   <p class="tag-line">
     I would really appreciate your feedback. Please click on the amount of 🐼 you would award for this talk!
   </p>
-  <button *ngIf="currentValue !== 0 || true" (click)="submitRating()">
+  <emoji-rating [value]="currentValue" (change)="changeRating($event.target)"></emoji-rating>
+  <button *ngIf="currentValue !== 0" (click)="submitRating()">
     Submit Rating
   </button>
-  <div *ngIf="submitted || true">
+  <div *ngIf="submitted">
     <p class="thank-you">
       Thanks for voting this talk with
       <span>{{currentValue}}</span> pandas!

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import EmojiRating from 'emoji-rating';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,16 @@ export class AppComponent implements OnInit {
   public currentValue = 0;
   public submitted = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.submitted = Boolean(localStorage.getItem('voted')) || false;
+  }
+
+  changeRating(ratingEl: EmojiRating) {
+    this.currentValue = ratingEl.value;
+    console.log(this.currentValue);
+    this.cdr.detectChanges();
   }
 
   async submitRating() {
