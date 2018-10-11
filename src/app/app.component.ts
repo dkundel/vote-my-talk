@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   public currentValue = 0;
   public submitted = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.submitted = Boolean(localStorage.getItem('voted')) || false;
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   async submitRating() {
     const url =
       'https://cors-anywhere.herokuapp.com/https://dramatic-sidewalk-3548.twil.io/vote-talk';
-    const event = 'ndcoslo-webcomponents';
+    const event = 's2techtalks-webcomponents';
     const vote = this.currentValue;
     // if (this.submitted) {
     //   return;
