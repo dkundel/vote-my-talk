@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +10,10 @@ export class AppComponent implements OnInit {
   public currentValue = 0;
   public submitted = false;
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.submitted = Boolean(localStorage.getItem('voted')) || false;
-  }
-
-  handleChange(event) {
-    const value = event.target.value;
-    this.currentValue = value;
-    this.cdr.detectChanges();
   }
 
   async submitRating() {

@@ -7,11 +7,10 @@
   <p class="tag-line">
     I would really appreciate your feedback. Please click on the amount of 🐼 you would award for this talk!
   </p>
-  <emoji-rating [value]="currentValue" (change)="handleChange($event)"></emoji-rating>
-  <button *ngIf="currentValue !== 0" (click)="submitRating()">
+  <button *ngIf="currentValue !== 0 || true" (click)="submitRating()">
     Submit Rating
   </button>
-  <div *ngIf="submitted">
+  <div *ngIf="submitted || true">
     <p class="thank-you">
       Thanks for voting this talk with
       <span>{{currentValue}}</span> pandas!
@@ -33,8 +32,7 @@
         <a href="https://github.com/dkundel/vote-my-talk">Code for this demo</a>
       </li>
       <li>
-        <a href="https://www.twilio.com/blog/2018/02/creating-and-publishing-web-components-with-stencil.html">Creating
-          web components in Stencil</a>
+        <a href="https://www.twilio.com/blog/2018/02/creating-and-publishing-web-components-with-stencil.html">Creating web components in Stencil</a>
       </li>
     </ul>
   </div>
