@@ -27,9 +27,9 @@ export class AppComponent implements OnInit {
       'https://cors-anywhere.herokuapp.com/https://dramatic-sidewalk-3548.twil.io/vote-talk';
     const event = 'ruhrjs-webcomponents';
     const vote = this.currentValue;
-    // if (this.submitted) {
-    //   return;
-    // }
+    if (this.submitted) {
+      return;
+    }
 
     try {
       const resp = await this.http.post(url, { vote, event }).toPromise();
