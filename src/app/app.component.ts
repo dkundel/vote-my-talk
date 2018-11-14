@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   async submitRating() {
     const url =
       'https://cors-anywhere.herokuapp.com/https://dramatic-sidewalk-3548.twil.io/vote-talk';
-    const event = 'ruhrjs-webcomponents';
+    const event = 'jspoland-webcomponents';
     const vote = this.currentValue;
     if (this.submitted) {
       return;
