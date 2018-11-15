@@ -1,40 +1,37 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <div class="main">
-  <h1>
-    Thanks for watching my talk!
-  </h1>
+  <h1>Thanks for watching my talk!</h1>
   <img src="https://media.giphy.com/media/l3V0lsGtTMSB5YNgc/giphy.gif" />
   <p class="tag-line">
-    I would really appreciate your feedback. Please click on the amount of 🐼 you would award for this talk!
+    I would really appreciate your feedback. Please click on the amount of 🐼
+    you would award for this talk!
   </p>
-  <emoji-rating (change)="handleChange($event)"></emoji-rating>
   <button *ngIf="currentValue !== 0" (click)="submitRating()">
     Submit Rating
   </button>
-  <div *ngIf="submitted">
+  <div *ngIf="submitted || true">
     <p class="thank-you">
-      Thanks for voting this talk with
-      <span>{{currentValue}}</span> pandas!
+      Thanks for voting this talk with <span>{{ currentValue }}</span> pandas!
     </p>
   </div>
   <div>
     <h2>Resources</h2>
     <ul>
+      <li><a href="https://twitter.com/dkundel">@dkundel</a></li>
+      <li><a href="https://github.com/dkundel">github.com/dkundel</a></li>
       <li>
-        <a href="https://twitter.com/dkundel">@dkundel</a>
-      </li>
-      <li>
-        <a href="https://github.com/dkundel">github.com/dkundel</a>
-      </li>
-      <li>
-        <a href="https://github.com/dkundel/emoji-rating">Web Component Code for emoji-rating</a>
+        <a href="https://github.com/dkundel/emoji-rating"
+          >Web Component Code for emoji-rating</a
+        >
       </li>
       <li>
         <a href="https://github.com/dkundel/vote-my-talk">Code for this demo</a>
       </li>
       <li>
-        <a href="https://www.twilio.com/blog/2018/02/creating-and-publishing-web-components-with-stencil.html">Creating
-          web components in Stencil</a>
+        <a
+          href="https://www.twilio.com/blog/2018/02/creating-and-publishing-web-components-with-stencil.html"
+          >Creating web components in Stencil</a
+        >
       </li>
     </ul>
   </div>
