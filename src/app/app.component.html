@@ -9,6 +9,7 @@
   <button *ngIf="currentValue !== 0" (click)="submitRating()">
     Submit Rating
   </button>
+  <emoji-rating (change)="handleChange($event)"></emoji-rating>
   <div *ngIf="submitted || true">
     <p class="thank-you">
       Thanks for voting this talk with <span>{{ currentValue }}</span> pandas!
